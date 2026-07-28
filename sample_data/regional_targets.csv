@@ -1,0 +1,13 @@
+region,category,quarter,revenue_target
+North,Electronics,Q1-2024,600
+North,Furniture,Q1-2024,300
+North,Stationery,Q1-2024,150
+South,Electronics,Q1-2024,500
+South,Furniture,Q1-2024,350
+South,Stationery,Q1-2024,120
+East,Electronics,Q1-2024,450
+East,Furniture,Q1-2024,250
+East,Stationery,Q1-2024,180
+West,Electronics,Q1-2024,550
+West,Furniture,Q1-2024,300
+West,Stationery,Q1-2024,140
