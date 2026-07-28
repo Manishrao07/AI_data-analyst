@@ -154,7 +154,7 @@ python -m eval.run_eval
 
 ## Assumptions & Implementation Notes
 
-- **Anomaly detection is grouped per-category**, not global — a single global IQR bound across all products (e.g. comparing a ₹4.5 notebook to a ₹150 office chair) produced heavy over-flagging in testing. Bounds are computed per `category` group instead, so each row is compared to its own peer group.
+- **Anomaly detection is grouped per-category, not global** — during testing, the dataset contained a **₹4500 Premium Laptop Stand**, which was significantly more expensive than the other products in the `Electronics` category and was correctly identified as an outlier. Using a single global IQR bound across all products produced misleading comparisons between unrelated categories and increased false positives. Bounds are therefore computed per `category` group instead, so each product is compared only against similar items within its own category.
 - **Derived and identifier columns are excluded from anomaly features** — `revenue` (= `quantity × unit_price`) is dropped from the feature set since it's mathematically derived from other flagged columns, and any column containing `id` (e.g. `order_id`) is excluded since identifiers carry no statistical meaning and previously distorted which row got flagged.
 - **A minimum severity floor (0.3)** is applied so that rows barely outside the IQR bound aren't flagged — only genuinely extreme deviations are surfaced.
 - **`IsolationForest` runs with `n_jobs=1`** as a defensive fix for a joblib/OpenBLAS multiprocessing segfault observed on Apple Silicon.
