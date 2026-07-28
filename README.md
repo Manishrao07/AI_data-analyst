@@ -2,7 +2,7 @@
 
 An AI-powered data analyst built for the Digital Back Office Ltd. AI Engineer Internship assignment. Upload one or more CSV files and ask questions about them in plain English — the app answers, generates charts, writes SQL, detects anomalies, and explains its reasoning at every step.
 
-‼️#**Demo video:** *(https://youtu.be/MfMCJeQgZtM)*
+‼️**Demo video:** *(https://youtu.be/MfMCJeQgZtM)*
 
 ## Features
 
