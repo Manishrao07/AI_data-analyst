@@ -173,4 +173,4 @@ python -m eval.run_eval
 - [x] Docker support
 - [x] Sample datasets (`sample_data/`)
 
-**Demo video:** *(add link here)*
+▶️**Demo video:** *(https://youtu.be/MfMCJeQgZtM)*
